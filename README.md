@@ -39,7 +39,10 @@ The dataframes can be manipulated to re-create the published numerical results.
 
 #### Re-creating article plots
 We have added a few examples to re-create parts of the article plots in the ./article folder.
-If running from the command line, make sure you add ```python plt.show()``` to the scripts to show plots.
+If running from the command line, make sure you add the 'show' command to the scripts to show plots:
+```python 
+plt.show()
+``` 
 
 ### License
 All software files are licensed under MIT license.
