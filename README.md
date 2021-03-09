@@ -8,7 +8,8 @@ Set of files to re-create numerical results published in the following articles:
 
 #### Numerical results
 The numerical results we obtained are available in the ./results folder. Each file is stored 
-as an HDF5 file. The cathode-package repository (DOI: ) 
+as an HDF5 file. 
+The [cathode-package repository](https://github.com/eppdyl/cathode-package) (DOI: ) 
 contains further information about the structure of the HDF5 file itself.
 
 For each "insert" result, the corresponding HDF5 group contains a brief description of the input 
@@ -17,12 +18,13 @@ We also have added a "simulation inventory" file that contains the model inputs,
 in the HDF5 file, and a description of the simulation. 
 
 #### Experimental data
-The experimental data we used are available in the cathode-database repository 
+The experimental data we used are available in the [cathode-database repository](https://github.com/eppdyl/cathode-database) 
 (DOI: 10.5281/zenodo.3956853). Some of the data appear inline in some of the example files. 
 
+---
 ### How to use
-1. Download and install the cathode Python package (DOI: ).
-2. Download cross section data (elastic, ionization, excitation) for argon and xenon from the LXCAT (lxcat.net) website.
+1. Download and install the [cathode Python package](https://github.com/eppdyl/cathode-package) (DOI: ).
+2. Download cross section data (elastic, ionization, excitation) for argon and xenon from the [LXCAT](https://lxcat.net) website
 3. Store cross section data as "gasname_all.dat" in a "data" folder. For example: 
 ```bash
 mkdir data/
@@ -44,8 +46,10 @@ If running from the command line, make sure you add the 'show' command to the sc
 plt.show()
 ``` 
 
+---
 ### License
 All software files are licensed under MIT license.
 The numerical results are licensed under CC-BY-4.0. 
 
+---
 Pierre-Yves Taunay, 2021
