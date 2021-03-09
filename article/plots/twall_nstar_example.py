@@ -31,7 +31,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 ### Path to HDF5 file
-path_to_results = '../results/nstar.h5'
+path_to_results = '../../results/nstar.h5'
 
 ### Generate a dataframe out of results for the following parameters:
 # Discharge current = 5-15 A

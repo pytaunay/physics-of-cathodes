@@ -32,7 +32,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 ### Path to HDF5 file
-path_to_results = '../results/jpl_lab6.h5'
+path_to_results = '../../results/jpl_lab6.h5'
 
 ### Generate a dataframe out of results for the following parameters:
 # Discharge current = 20-100 A
