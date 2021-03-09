@@ -9,7 +9,7 @@ Set of files to re-create numerical results published in the following articles:
 #### Numerical results
 The numerical results we obtained are available in the ./results folder. Each file is stored 
 as an HDF5 file. 
-The [cathode-package repository](https://github.com/eppdyl/cathode-package) (DOI: ) 
+The [cathode-package repository](https://github.com/eppdyl/cathode-package) (DOI:10.5281/zenodo.4592504) 
 contains further information about the structure of the HDF5 file itself.
 
 For each "insert" result, the corresponding HDF5 group contains a brief description of the input 
@@ -23,7 +23,7 @@ The experimental data we used are available in the [cathode-database repository]
 
 ---
 ### How to use
-1. Download and install the [cathode Python package](https://github.com/eppdyl/cathode-package) (DOI: ).
+1. Download and install the [cathode Python package](https://github.com/eppdyl/cathode-package) (DOI:10.5281/zenodo.4592504).
 2. Download cross section data (elastic, ionization, excitation) for argon and xenon from the [LXCAT](https://lxcat.net) website
 3. Store cross section data as "gasname_all.dat" in a "data" folder. For example: 
 ```bash
