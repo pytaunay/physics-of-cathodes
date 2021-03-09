@@ -1,0 +1,41 @@
+cathode,date,key,full_key,discharge_current_min,discharge_current_max,mass_flow_min,mass_flow_max,neutral_temperature,potential_min,potential_max,description
+nstar,20210304,r20210304223500,Xe/simulations/results/2000/insert/r20210304223500,5,15,3.7,10,2000,1,10,"Discharge current sweep (5-15 A) for two mass flow rate (3.7 sccm, 10 sccm)"
+nstar,20210304,r20210304185153,Xe/simulations/results/2000/insert/r20210304185153,8.29,8.29,2.47,2.47,2000,1,10,Temperature sweep (2000-4000) for single discharge current (8.29 A) and mass flow rate (2.47 sccm)
+nstar,20210304,r20210304185851,Xe/simulations/results/2000/insert/r20210304185851,13.2,13.2,3.7,3.7,2000,1,10,Temperature sweep (2000-4000) for single discharge current (13.2 A) and mass flow rate (3.7 sccm)
+nstar,20210304,r20210304225118,Xe/simulations/results/3000/insert/r20210304225118,5,15,3.7,10,3000,1,10,"Discharge current sweep (5-15 A) for two mass flow rate (3.7 sccm, 10 sccm)"
+nstar,20210304,r20210305144515,Xe/simulations/results/3000/insert/r20210305144515,12,12,3,5,3000,1,10,Mass flow rate sweep (3-5 sccm) for single current (12 A)
+nstar,20210304,r20210304185359,Xe/simulations/results/3000/insert/r20210304185359,8.29,8.29,2.47,2.47,3000,1,10,Temperature sweep (2000-4000) for single discharge current (8.29 A) and mass flow rate (2.47 sccm)
+nstar,20210304,r20210304190116,Xe/simulations/results/3000/insert/r20210304190116,13.2,13.2,3.7,3.7,3000,1,10,Temperature sweep (2000-4000) for single discharge current (13.2 A) and mass flow rate (3.7 sccm)
+nstar,20210304,r20210304230806,Xe/simulations/results/4000/insert/r20210304230806,5,15,3.7,10,4000,1,10,"Discharge current sweep (5-15 A) for two mass flow rate (3.7 sccm, 10 sccm)"
+nstar,20210304,r20210304185623,Xe/simulations/results/4000/insert/r20210304185623,8.29,8.29,2.47,2.47,4000,1,10,Temperature sweep (2000-4000) for single discharge current (8.29 A) and mass flow rate (2.47 sccm)
+nstar,20210304,r20210304190330,Xe/simulations/results/4000/insert/r20210304190330,13.2,13.2,3.7,3.7,4000,1,10,Temperature sweep (2000-4000) for single discharge current (13.2 A) and mass flow rate (3.7 sccm)
+jpl_lab6,20210303,r20210303211954,Xe/simulations/results/2000/insert/r20210303211954,20,100,8,12,2000,1,10,"Discharge current sweep (20-100 A) for two mass flow rate (8 sccm, 12 sccm)"
+jpl_lab6,20210303,r20210303205237,Xe/simulations/results/3000/insert/r20210303205237,20,20,8,8,3000,1,1,"Single test point (20 A, 8 sccm, 1 V) for debugging purposes"
+jpl_lab6,20210303,r20210303213415,Xe/simulations/results/3000/insert/r20210303213415,20,100,8,12,3000,1,10,"Discharge current sweep (20-100 A) for two mass flow rate (8 sccm, 12 sccm)"
+jpl_lab6,20210303,r20210303214842,Xe/simulations/results/4000/insert/r20210303214842,20,100,8,12,4000,1,10,"Discharge current sweep (20-100 A) for two mass flow rate (8 sccm, 12 sccm)"
+nexis,20210305,r20210305171053,Xe/simulations/results/2000/insert/r20210305171053,22,22,4,10,2000,1,10,Mass flow rate sweep (4-10 sccm) for single current (22 A)
+nexis,20210304,r20210304192828,Xe/simulations/results/2000/insert/r20210304192828,10,25,5.5,10,2000,1,10,"Two flow rates (5.5, 10 sccm) and discharge currents (10, 25 A)"
+nexis,20210305,r20210305163012,Xe/simulations/results/2000/insert/r20210305163012,8,26,5.5,5.5,2000,1,10,Discharge current sweep (8-26 A) for single flow rate (5.5 sccm)
+nexis,20210304,r20210304193119,Xe/simulations/results/3000/insert/r20210304193119,10,25,5.5,10,3000,1,10,"Two flow rates (5.5, 10 sccm) and discharge currents (10, 25 A)"
+nexis,20210305,r20210305164507,Xe/simulations/results/3000/insert/r20210305164507,8,26,5.5,5.5,3000,1,10,Discharge current sweep (8-26 A) for single flow rate (5.5 sccm)
+nexis,20210305,r20210305174356,Xe/simulations/results/3000/insert/r20210304193119,22,22,4,10,3000,1,10,Mass flow rate sweep (4-10 sccm) for single current (22 A)
+nexis,20210304,r20210304193415,Xe/simulations/results/4000/insert/r20210304193415,10,25,5.5,10,4000,1,10,"Two flow rates (5.5, 10 sccm) and discharge currents (10, 25 A)"
+nexis,20210305,r20210305170023,Xe/simulations/results/4000/insert/r20210305170023,8,26,5.5,5.5,4000,1,10,Discharge current sweep (8-26 A) for single flow rate (5.5 sccm)
+nexis_do-2.0mm,20210304,r20210304211359,Xe/simulations/results/2000/insert/r20210304211359,25,25,5.5,10,2000,1,10,"Two flow rates (5.5, 10 sccm) and single discharge current (25 A)"
+nexis_do-2.0mm,20210304,r20210304211620,Xe/simulations/results/3000/insert/r20210304211620,25,25,5.5,10,3000,1,10,"Two flow rates (5.5, 10 sccm) and single discharge current (25 A)"
+nexis_do-2.0mm,20210304,r20210304211840,Xe/simulations/results/4000/insert/r20210304211840,25,25,5.5,10,4000,1,10,"Two flow rates (5.5, 10 sccm) and single discharge current (25 A)"
+salhi_xe,20210304,r20210304172101,Xe/simulations/results/2000/insert/r20210304172101,1,20,6.7,6.7,2000,1,10,Discharge current sweep (1-20 A) for single flow rate (0.5 A or 6.7 sccm)
+salhi_xe,20210304,r20210304172637,Xe/simulations/results/3000/insert/r20210304172637,1,20,6.7,6.7,3000,1,10,Discharge current sweep (1-20 A) for single flow rate (0.5 A or 6.7 sccm)
+salhi_xe,20210304,r20210304173212,Xe/simulations/results/4000/insert/r20210304173212,1,20,6.7,6.7,4000,1,10,Discharge current sweep (1-20 A) for single flow rate (0.5 A or 6.7 sccm)
+siegfried,20210305,r20210305021601,Xe/simulations/results/2000/insert/r20210305021601,2.3,2.3,1.77,7.34,2000,1,10,Mass flow rate sweep (1.77-7.34 sccm) for single current (2.3 A)
+siegfried,20210305,r20210305022632,Xe/simulations/results/3000/insert/r20210305022632,2.3,2.3,1.77,7.34,3000,1,10,Mass flow rate sweep (1.77-7.34 sccm) for single current (2.3 A)
+siegfried,20210305,r20210305023703,Xe/simulations/results/4000/insert/r20210305023703,2.3,2.3,1.77,7.34,4000,1,10,Mass flow rate sweep (1.77-7.34 sccm) for single current (2.3 A)
+friedly,20210306,r20210306023131,Xe/simulations/results/2000/insert/r20210306023131,5,60,5.16,5.16,2000,1,10,Discharge current sweep (5-60 A) for single flow rate (0.37 A or 5.2 sccm)
+friedly,20210306,r20210306174156,Xe/simulations/results/3000/insert/r20210306174156,5,60,5.16,5.16,3000,1,10,Discharge current sweep (5-60 A) for single flow rate (0.37 A or 5.2 sccm)
+friedly,20210306,r20210306180132,Xe/simulations/results/4000/insert/r20210306180132,5,60,5.16,5.16,4000,1,10,Discharge current sweep (5-60 A) for single flow rate (0.37 A or 5.2 sccm)
+PLHC,20210309,r20210309170903,Ar/simulations/results/2000/insert/r20210309170903,100,307,109,109,2000,1,10,Discharge current sweep (100-307 A) for single flow rate (109 sccm)
+PLHC,20210309,r20210309173700,Ar/simulations/results/3000/insert/r20210309173700,100,307,109,109,3000,1,10,Discharge current sweep (100-307 A) for single flow rate (109 sccm)
+PLHC,20210309,r20210309180518,Ar/simulations/results/4000/insert/r20210309180518,100,307,109,109,4000,1,10,Discharge current sweep (100-307 A) for single flow rate (109 sccm)
+salhi_ar,20210309,r20210309170114,Ar/simulations/results/2000/insert/r20210309170114,1,20,6,13,2000,1,10,"Discharge current sweep (1-20 A) for two mass flow rate (0.5 eqA, 0.93 eqA)"
+salhi_ar,20210309,r20210309180313,Ar/simulations/results/3000/insert/r20210309180313,1,20,6,13,3000,1,10,"Discharge current sweep (1-20 A) for two mass flow rate (0.5 eqA, 0.93 eqA)"
+salhi_ar,20210309,r20210309190430,Ar/simulations/results/4000/insert/r20210309190430,1,20,6,13,4000,1,10,"Discharge current sweep (1-20 A) for two mass flow rate (0.5 eqA, 0.93 eqA)"
