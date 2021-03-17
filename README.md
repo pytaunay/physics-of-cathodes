@@ -2,9 +2,11 @@
 Set of files to re-create numerical results published in the following articles:
 
 * P.-Y. C. R. Taunay, C. J. Wordingham, E. Y. Choueiri, 
-"Physics of Thermionic, Orificed Hollow Cathodes. Part 1: Theory and Experimental Validation" 
+"Physics of Thermionic, Orificed Hollow Cathodes. Part 1: Theory and Experimental Validation," 
+Plasma Sources Science and Technology, 2021
 * P.-Y. C. R. Taunay, C. J. Wordingham, E. Y. Choueiri, 
-"Physics of Thermionic, Orificed Hollow Cathodes. Part 2: Scaling Laws"
+"Physics of Thermionic, Orificed Hollow Cathodes. Part 2: Scaling Laws and Design Rules," 
+Plasma Sources Science and Technology, 2021.
 
 #### Numerical results
 The numerical results we obtained are available in the ./results folder. Each file is stored 
@@ -24,7 +26,7 @@ The experimental data we used are available in the [cathode-database repository]
 ---
 ### How to use
 1. Download and install the [cathode Python package](https://github.com/eppdyl/cathode-package) (DOI:10.5281/zenodo.4592504).
-2. Download cross section data (elastic, ionization, excitation) for argon and xenon from the [LXCAT](https://lxcat.net) website
+2. Download cross section data (elastic, ionization, excitation) for argon and xenon from the [LXCAT](https://lxcat.net) website.
 3. Store cross section data as "gasname_all.dat" in a "data" folder. For example: 
 ```bash
 mkdir data/
@@ -40,11 +42,7 @@ will contain Pandas dataframes with the computed results.
 The dataframes can be manipulated to re-create the published numerical results. 
 
 #### Re-creating article plots
-We have added a few examples to re-create parts of the article plots in the ./article folder.
-If running from the command line, make sure you add the 'show' command to the scripts to show plots:
-```python 
-plt.show()
-``` 
+We have added a few examples to re-create parts of the article plots in the ./article/plots folder.
 
 ---
 ### License
