@@ -119,3 +119,4 @@ ax[1].set_xlabel('Mass flow rate (sccm)')
 ax[1].set_ylabel('Total pressure (Torr)')
 ax[1].set_title("Id = 12 A")
 
+plt.show()

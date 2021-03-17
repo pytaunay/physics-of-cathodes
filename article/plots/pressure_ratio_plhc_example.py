@@ -95,3 +95,5 @@ plt.ylim([1,10])
 
 plt.xlabel("Id / mdot")
 plt.ylabel("P / Pmag")
+
+plt.show()

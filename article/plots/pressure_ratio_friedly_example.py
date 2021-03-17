@@ -103,3 +103,5 @@ plt.ylim([1,300])
 
 plt.xlabel("Id / mdot")
 plt.ylabel("P / Pmag")
+
+plt.show()

@@ -137,3 +137,4 @@ ax[1].set_ylabel('Insert electron temperature (eV)')
 ax[1].set_ylim([0,3])
 ax[1].set_xlim([1,25])
 
+plt.show()

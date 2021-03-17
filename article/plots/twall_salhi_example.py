@@ -147,3 +147,4 @@ plt.errorbar(xp_13sccm[:,0], xp_13sccm[:,1], yerr=xp_13sccm[:,2],fmt='k^')
 plt.xlim([0,21])
 plt.ylim([100,1300])
 
+plt.show()

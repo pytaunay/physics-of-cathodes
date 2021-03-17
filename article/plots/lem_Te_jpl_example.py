@@ -168,3 +168,5 @@ ax[1].set_ylim([0,1])
 ax[1].set_xlabel('Discharge current (A)')
 ax[1].set_ylabel('Insert electron temperature (eV)')
 ax[1].set_ylim([0,3])
+
+plt.show()

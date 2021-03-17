@@ -99,3 +99,5 @@ plt.ylim([100,np.max(maxTw)+100])
 plt.xlim([4,16])
 plt.xlabel("Discharge current")
 plt.ylabel("Insert wall temperature (degC)")
+
+plt.show()

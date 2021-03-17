@@ -87,3 +87,4 @@ ax.set_xlabel('Discharge current (A)')
 ax.set_ylabel('Total pressure (Torr)')
 ax.set_title("mdot = 109 sccm")
 
+plt.show()
