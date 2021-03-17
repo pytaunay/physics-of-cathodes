@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4615625.svg)](https://doi.org/10.5281/zenodo.4615625)
+
 ### Description
 Set of files to re-create numerical results published in the following articles:
 
