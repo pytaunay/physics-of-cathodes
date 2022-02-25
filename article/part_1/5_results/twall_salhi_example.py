@@ -24,7 +24,8 @@
 File: twall_salhi_example.py
 Author: Pierre-Yves Taunay
 Date: March, 2021
-Description: generate Fig. 11b in Part 1 of Physics of Thermionic Orificed Hollow Cathodes.
+Description: generate Fig. 12b in Part 1 of Physics of Thermionic Orificed Hollow Cathodes.
+This script requires the collision cross sections for argon. 
 """
 
 import numpy as np
@@ -35,7 +36,7 @@ from scipy.optimize import root
 from cathode.models.taunay_et_al_core.collision_holder import collision_holder
 
 ### Path to HDF5 file
-path_to_results = '../../results/salhi_ar.h5'
+path_to_results = '../../../results/salhi_ar.h5'
 
 ### Generate a dataframe out of results for the following parameters:
 # Discharge current = 1-20 A
@@ -118,8 +119,8 @@ for wf in [1.8, 2.0]:
         maxTw[kk] = np.max(dfxx['insertTemperature'])    
     
     ### Plot data
-    plt.plot(Idvec,minTw)
-    plt.plot(Idvec,maxTw)
+    plt.plot(Idvec,minTw,'k-',label='_nolegend_')
+    plt.plot(Idvec,maxTw,'k-',label='_nolegend_')
     plt.fill_between(Idvec,minTw,maxTw)
     
 xp_6sccm = np.array([
@@ -143,6 +144,11 @@ xp_13sccm = np.array([
     
 plt.errorbar(xp_6sccm[:,0], xp_6sccm[:,1], yerr=xp_6sccm[:,2],fmt='ko')
 plt.errorbar(xp_13sccm[:,0], xp_13sccm[:,1], yerr=xp_13sccm[:,2],fmt='k^')
+
+plt.title("Salhi's cathode (argon)")
+plt.legend(['This work (1.8 eV)','This work (2.0 eV)','7 sccm','13 sccm'])
+plt.xlabel("Discharge current (A)")
+plt.ylabel("Insert wall temperature (degC)")
 
 plt.xlim([0,21])
 plt.ylim([100,1300])
