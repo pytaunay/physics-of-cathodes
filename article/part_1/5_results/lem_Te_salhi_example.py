@@ -23,7 +23,7 @@
 File: lem_Te_salhi_example.py
 Author: Pierre-Yves Taunay
 Date: March, 2021
-Description: generate Fig. 12a and 12b in Part 1 of Physics of Thermionic Orificed Hollow Cathodes.
+Description: generate Fig. 13a and 13b in Part 1 of Physics of Thermionic Orificed Hollow Cathodes.
 We only consider Salhi's cathode for this example.
 """
 import numpy as np
@@ -31,7 +31,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 ### Path to HDF5 file
-path_to_results = '../../results/salhi_xe.h5'
+path_to_results = '../../../results/salhi_xe.h5'
 
 ### Generate a dataframe out of results for the following parameters:
 # Discharge current = 1-20 A
@@ -97,12 +97,12 @@ for idx, md in enumerate(mdvec):
     
     # Plot
     ax[0].fill_between(Idvec,min_lem,max_lem,color=color)
-    ax[0].plot(Idvec,min_lem,style)
-    ax[0].plot(Idvec,max_lem,style)
+    ax[0].plot(Idvec,min_lem,style,label='_nolegend_')
+    ax[0].plot(Idvec,max_lem,style,label='_nolegend_')
     
     ax[1].fill_between(Idvec,min_te,max_te,color=color)
-    ax[1].plot(Idvec,min_te,style)
-    ax[1].plot(Idvec,max_te,style)
+    ax[1].plot(Idvec,min_te,style,label='_nolegend_')
+    ax[1].plot(Idvec,max_te,style,label='_nolegend_')
 
 ### Experimental data
 xp_lem = np.array([
@@ -127,6 +127,11 @@ ax[1].errorbar(xp_te[:,0], xp_te[:,1], yerr=xp_te[:,2], fmt='ks')
     
 
 ### Labels
+ax[0].set_title("Salhi's cathode attachment length")
+ax[1].set_title("Salhi's cathode electron temperature")
+ax[0].legend(['This work','Experiment'])
+ax[1].legend(['This work','Experiment'])
+
 ax[0].set_xlabel('Discharge current (A)')
 ax[0].set_ylabel('Emission length / insert diameter')
 ax[0].set_ylim([0,1])

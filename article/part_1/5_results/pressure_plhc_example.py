@@ -24,7 +24,7 @@
 File: pressure_plhc_example.py
 Author: Pierre-Yves Taunay
 Date: March, 2021
-Description: generate Fig. 13e in Part 1 of Physics of Thermionic Orificed Hollow Cathodes.
+Description: generate Fig. 14e in Part 1 of Physics of Thermionic Orificed Hollow Cathodes.
 The data presented are for a neutral gas temperature of 3000 K
 """
 import numpy as np
@@ -32,7 +32,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 ### Path to HDF5 file
-path_to_results = '../../results/plhc.h5'
+path_to_results = '../../../results/plhc.h5'
 
 ### Generate a dataframe out of results for the following parameters:
 # Discharge current = 100-307 A
@@ -83,8 +83,9 @@ xp_constant_mdot = np.array([[100, 2.44 ,0.0061],
 ax.errorbar(xp_constant_mdot[:,0],xp_constant_mdot[:,1],yerr = xp_constant_mdot[:,2],fmt='ko')
     
 ### Labels
+ax.legend(["phi_sheath = 1 V","4 V","7 V","10 V","Experiment"])
 ax.set_xlabel('Discharge current (A)')
 ax.set_ylabel('Total pressure (Torr)')
-ax.set_title("mdot = 109 sccm")
+ax.set_title("PLHC, mdot = 109 sccm")
 
 plt.show()

@@ -24,7 +24,7 @@
 File: pressure_nstar_example.py
 Author: Pierre-Yves Taunay
 Date: March, 2021
-Description: generate Fig. 13a and 13b in Part 1 of Physics of Thermionic Orificed Hollow Cathodes.
+Description: generate Fig. 14a and 14b in Part 1 of Physics of Thermionic Orificed Hollow Cathodes.
 The data presented are for a neutral gas temperature of 3000 K
 """
 import numpy as np
@@ -32,7 +32,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 ### Path to HDF5 file
-path_to_results = '../../results/nstar.h5'
+path_to_results = '../../../results/nstar.h5'
 
 ### Generate a dataframe out of results for the following parameters:
 # Discharge current = 5-15 A; 12 A
@@ -111,12 +111,15 @@ xp_constant_id = np.array([[3.0, 6.5039],
 ax[1].plot(xp_constant_id[:,0],xp_constant_id[:,1],'ko')
     
 ### Labels
+ax[0].legend(["phi_sheath = 1 V","4 V","7 V","10 V","Experiment"])
+ax[1].legend(["phi_sheath = 1 V","4 V","7 V","10 V","Experiment"])
+
 ax[0].set_xlabel('Discharge current (A)')
 ax[0].set_ylabel('Total pressure (Torr)')
-ax[0].set_title("mdot = 3.7 sccm")
+ax[0].set_title("NSTAR, mdot = 3.7 sccm")
 
-ax[1].set_xlabel('Mass flow rate (sccm)')
+ax[1].set_xlabel('Mass flow rate (sccm of Xe)')
 ax[1].set_ylabel('Total pressure (Torr)')
-ax[1].set_title("Id = 12 A")
+ax[1].set_title("NSTAR, Id = 12 A")
 
 plt.show()
