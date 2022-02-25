@@ -98,6 +98,8 @@ plt.legend(['','This work','3.7 sccm','10 sccm'])
 # Plot labels and limits
 plt.ylim([100,np.max(maxTw)+100])
 plt.xlim([4,16])
+
+plt.title("NSTAR cathode (xenon)")
 plt.xlabel("Discharge current (A)")
 plt.ylabel("Insert wall temperature (degC)")
 
