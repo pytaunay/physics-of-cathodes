@@ -24,14 +24,14 @@
 File: twall_nstar_example.py
 Author: Pierre-Yves Taunay
 Date: March, 2021
-Description: generate Fig. 11a in Part 1 of Physics of Thermionic Orificed Hollow Cathodes.
+Description: generate Fig. 12a in Part 1 of Physics of Thermionic Orificed Hollow Cathodes.
 """
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
 ### Path to HDF5 file
-path_to_results = '../../results/nstar.h5'
+path_to_results = '../../../results/nstar.h5'
 
 ### Generate a dataframe out of results for the following parameters:
 # Discharge current = 5-15 A
@@ -92,12 +92,13 @@ xp_high_massflow = np.array([[6,1109.596],
 [8,1170.134],
 [10,1208.071]])
 plt.errorbar(xp_high_massflow[:,0],xp_high_massflow[:,1],yerr=15,fmt='k^')
+plt.legend(['','This work','3.7 sccm','10 sccm'])
 
 
 # Plot labels and limits
 plt.ylim([100,np.max(maxTw)+100])
 plt.xlim([4,16])
-plt.xlabel("Discharge current")
+plt.xlabel("Discharge current (A)")
 plt.ylabel("Insert wall temperature (degC)")
 
 plt.show()
