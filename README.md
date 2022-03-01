@@ -5,10 +5,10 @@ Set of files to re-create numerical results published in the following articles:
 
 * P.-Y. C. R. Taunay, C. J. Wordingham, E. Y. Choueiri, 
 "Physics of Thermionic, Orificed Hollow Cathodes. Part 1: Theory and Experimental Validation," 
-Plasma Sources Science and Technology, 2021
+Plasma Sources Science and Technology, 2022
 * P.-Y. C. R. Taunay, C. J. Wordingham, E. Y. Choueiri, 
 "Physics of Thermionic, Orificed Hollow Cathodes. Part 2: Scaling Laws and Design Rules," 
-Plasma Sources Science and Technology, 2021.
+Plasma Sources Science and Technology, 2022.
 
 #### Numerical results
 The numerical results we obtained are available in the ./results folder. Each file is stored 
@@ -46,10 +46,28 @@ The dataframes can be manipulated to re-create the published numerical results.
 #### Re-creating article plots
 We have added a few examples to re-create parts of the article plots in the ./article/plots folder.
 
+##### Container 
+To ensure reproducibility, a Singularity container is also provided to run the examples.
+The container must first be built:
+
+```bash
+cd ./container
+# If you do not have root access, use either fakeroot or remote options. See Singularity docs
+# The command below was tested with Singularity 3.8.4 on Ubuntu 20.04. There seems to be an issue 
+# with previous versions of Singularity and Ubuntu 20.04 when running with fakeroot.
+# See https://github.com/sylabs/singularity/issues/266
+singularity build --fakeroot singularity.sif singularity.def
+# If you have root access, you can use sudo
+sudo singularity build singularity.sif singularity.def
+```
+
+The container environment is now setup and the required Python packages are downloaded. The Python 
+scripts can then be run through the container 
+
 ---
 ### License
 All software files are licensed under MIT license.
 The numerical results are licensed under CC-BY-4.0. 
 
 ---
-Pierre-Yves Taunay, 2021
+Pierre-Yves Taunay, 2022
