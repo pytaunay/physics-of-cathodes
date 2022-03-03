@@ -303,7 +303,6 @@ for path_to_results, key_end, lem_data, te_data in zip(hdf5_paths,end_keys,xp_le
 
             # Trick for S&W to avoid plotting the same data multiple times
             if Id == 2.3:
-                print(ave_pd[idx],xp_te[idx,2],xerr[0,idx])
                 ax[1].errorbar(ave_pd[idx], xp_te[idx,2], yerr=xp_te[idx,3],
                         xerr=np.array([
                             [xerr[0,idx]],
@@ -320,6 +319,10 @@ te_theory = 0.52523 + 1.20072 / pdvec**0.35592
 ax[0].semilogx(pdvec,lem_theory,'k-')
 ax[1].semilogx(pdvec,te_theory,'k-')
 
+# Albertoni et al.
+ax[0].semilogx(pdvec, 760./101325. * 100. * 5./pdvec,'k--') # K = 5
+ax[0].semilogx(pdvec, 760./101325. * 100. * 8./pdvec,'k--') # K = 8
+
 
 #### Labels
 ax[0].set_xlabel('Neutral pressure - diameter product (Torr-cm)')
@@ -327,6 +330,7 @@ ax[0].set_ylabel('Emission length / insert diameter')
 ax[0].set_xlim([0.1,10])
 ax[0].set_ylim([0,1])
 ax[0].set_xscale('log')
+ax[0].legend(['Diffusion theory','Albertoni et al.'])
 
 ax[1].set_xlabel('Neutral pressure - diameter product (Torr-cm)')
 ax[1].set_ylabel('Insert electron temperature (eV)')
