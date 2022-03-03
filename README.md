@@ -37,17 +37,19 @@ cp my_downloaded_data data/ar_all.dat
 4. Use the provided scripts to re-create numerical results or plots from the article.
 
 #### Re-creating numerical results
-To re-create the numerical results, run the scripts that are located in the ./article folder. 
+To re-create the numerical results, run the scripts that are located in the
+./article/generate_numerical_results folder. 
 Each script will save data in an HDF5 file. 
 If running from an interactive Python interface the variable 'dflist' 
 will contain Pandas dataframes with the computed results. 
 The dataframes can be manipulated to re-create the published numerical results. 
 
 #### Re-creating article plots
-We have added a few examples to re-create parts of the article plots in the ./article/plots folder.
+We have added Python scripts to re-create the article plots in the ./article/part_1 and
+./article/part_2 folders.
 
 ##### Container 
-To ensure reproducibility, a Singularity container is also provided to run the examples.
+To ensure reproducibility, a Singularity container is also provided to run the scripts.
 The container must first be built:
 
 ```bash
@@ -63,6 +65,11 @@ sudo singularity build singularity.sif singularity.def
 
 The container environment is now setup and the required Python packages are downloaded. The Python 
 scripts can then be run through the container 
+
+```bash
+cd ./article/part_1/3_theory
+singularity exec ../../../container/singularity.sif python3 transition-flow-models.py
+```
 
 ---
 ### License
