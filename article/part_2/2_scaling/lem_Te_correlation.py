@@ -51,7 +51,7 @@ key_root = 'Xe/simulations/results/'
 end_keys = [
         ['r20210304185153','r20210304185359','r20210304185623'], # NSTAR, 2.47 sccm, 8.29 A
         ['r20210304185851','r20210304190116','r20210304190330'], # NSTAR 3.7 sccm, 13.2 A
-        ['r20210305163012','r20210305164507','r20210305170023'], # NEXIS 5.5 sccm, 25 A, 2.75 mm 
+        ['r20210304192828','r20210304193119','r20210304193415'], # NEXIS 5.5 sccm, 25 A, 2.75 mm 
         ['r20210304192828','r20210304193119','r20210304193415'], # NEXIS 10.0 sccm, 25 A, 2.75 mm 
         ['r20210304211359','r20210304211620','r20210304211840'], # NEXIS 2.0 mm 
         ['r20210304211359','r20210304211620','r20210304211840'], # NEXIS 2.0 mm 
@@ -144,18 +144,19 @@ xp_te_all = [
             ]),
         # NEXIS 2.75 mm orifice
         np.array([
-            [5.5, 10.0,3.76, 0.5 ],
-            [5.5, 25.0,2.11151774806103, 0.5]
+            [5.5, 10.0, 3.76, 0.5],
+            [5.5, 25.0, 2.11151774806103, 0.5]
             ]),
         np.array([
             [10.0, 25.0, 1.754809,0.5]
             ]),
         # NEXIS 2.0 mm orifice
+        # Garbage values so that we can easily iterate
         np.array([
-            [0.0, 25.0, 0.34930177041878169,0.096754214171287073],
+            [0.0, 25.0, 0.0 ,0.0],
             ]),
         np.array([
-            [0.0, 25.0, 0.33832219159751992,0.060160460906435065]
+            [0.0, 25.0, 0.0 ,0.0]
             ]),
         # JPL 1.5 cm cathode
         np.array([
@@ -298,17 +299,18 @@ for path_to_results, key_end, lem_data, te_data in zip(hdf5_paths,end_keys,xp_le
             xerr[0,:] = np.copy(ave_pd-min_pd)
             xerr[1,:] = np.copy(max_pd-ave_pd)
 
+            fmt = 'ko'
+
             # Trick for S&W to avoid plotting the same data multiple times
             if Id == 2.3:
                 print(ave_pd[idx],xp_te[idx,2],xerr[0,idx])
                 ax[1].errorbar(ave_pd[idx], xp_te[idx,2], yerr=xp_te[idx,3],
                         xerr=np.array([
                             [xerr[0,idx]],
-                            [xerr[1,idx]]]),fmt='ko')
+                            [xerr[1,idx]]]),fmt=fmt)
             else:
-                ax[1].errorbar(ave_pd, xp_te[:,2], yerr=xp_te[:,3], xerr=xerr, fmt='ko')
+                ax[1].errorbar(ave_pd, xp_te[:,2], yerr=xp_te[:,3], xerr=xerr, fmt=fmt)
 
-            print(path_to_results, md*cc.sccm2eqA, ave_pd, xp_te[:,2])
 
     
 ### Plot correlation from diffusion theory
@@ -326,10 +328,10 @@ ax[0].set_xlim([0.1,10])
 ax[0].set_ylim([0,1])
 ax[0].set_xscale('log')
 
-ax[0].set_xlabel('Neutral pressure - diameter product (Torr-cm)')
+ax[1].set_xlabel('Neutral pressure - diameter product (Torr-cm)')
 ax[1].set_ylabel('Insert electron temperature (eV)')
 ax[1].set_xlim([0.1,10])
-ax[1].set_ylim([0,3])
+ax[1].set_ylim([0,5])
 ax[1].set_xscale('log')
 
 plt.show()
